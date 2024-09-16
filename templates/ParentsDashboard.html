@@ -1,0 +1,42 @@
+{% block title %}Student Portal - SmartDesk {% endblock %}
+<link rel="stylesheet" href="{{url_for("static", filename="css/ParentsDashboard.css")}}" />
+<!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>Parent Dashboard</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Child's Progress</a></li>
+                <li><a href="#">Upcoming Events</a></li>
+                <li><a href="#">Grades</a></li>
+                <li><a href="#">Assignments</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="dashboard-header">
+            <h1>Welcome, Parent!</h1>
+        </header>
+        <section class="dashboard-summary">
+            <div class="summary-card">
+                <h3>Child's Progress</h3>
+                <p>View your child's academic performance and growth.</p>
+            </div>
+            <div class="summary-card">
+                <h3>Upcoming Events</h3>
+                <p>Stay informed about school events and activities.</p>
+            </div>
+            <div class="summary-card">
+                <h3>Recent Grades</h3>
+                <p>Check the latest grades and feedback from teachers.</p>
+            </div>
+        </section>
+    </main

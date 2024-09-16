@@ -1,0 +1,145 @@
+/* Reset Styles */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Body Style */
+body {
+    display: flex;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #3f51b5; /* Blue color for student portal */
+    color: #fff;
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.sidebar-header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #303f9f; /* Darker blue for header */
+    border-bottom: 1px solid #444;
+}
+
+.sidebar-header h2 {
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.sidebar-nav ul {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-nav li {
+    margin-bottom: 10px;
+}
+
+.sidebar-nav a {
+    color: #ddd;
+    text-decoration: none;
+    display: block;
+    padding: 12px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+    background-color: #536dfe;
+    color: #ffffff;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 100px; /* Adjust based on sidebar width */
+    padding: 30px;
+    width: calc(100% - 250px); /* Adjust to fill remaining space */
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    transition: all 0.3s;
+}
+
+.portal-header {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.portal-header h1 {
+    font-size: 2em;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+}
+
+.portal-dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 20px); /* Responsive grid layout */
+    min-width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dashboard-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.4em;
+    color: #3f51b5;
+    font-weight: 600;
+}
+
+.dashboard-card p {
+    font-size: 1.2em;
+    color: #666;
+    margin: 0;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Logout Button Styling */
+.sidebar-nav li a[href="#logout"] {
+    background-color: #e53935;
+    color: #fff;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom:

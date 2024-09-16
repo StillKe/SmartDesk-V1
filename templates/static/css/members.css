@@ -1,0 +1,107 @@
+/* Tailwind CSS custom styles */
+:root {
+    --background: #f7f7f7;
+    --foreground: #333333;
+    --primary: #3b82f6;
+    --border: #d1d5db;
+    --input: #e5e7eb;
+    --ring: #2563eb;
+    --primary-foreground: #ffffff;
+    --secondary: #6b7280;
+    --secondary-foreground: #ffffff;
+    --accent: #10b981;
+    --accent-foreground: #ffffff;
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+    --muted: #9ca3af;
+    --muted-foreground: #ffffff;
+    --card: #ffffff;
+    --card-foreground: #333333;
+    --popover: #f3f4f6;
+    --popover-foreground: #333333;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'Roboto', sans-serif;
+}
+
+.bg-card {
+    background-color: var(--card);
+}
+
+.text-muted-foreground {
+    color: var(--muted-foreground);
+}
+
+.border {
+    border-color: var(--border);
+}
+
+.focus\:ring {
+    box-shadow: 0 0 0 3px var(--ring);
+}
+
+.bg-secondary {
+    background-color: var(--secondary);
+}
+
+.text-secondary-foreground {
+    color: var(--secondary-foreground);
+}
+
+.hover\:bg-secondary:hover {
+    background-color: rgba(107, 114, 128, 0.8);
+}
+
+.text-accent {
+    color: var(--accent);
+}
+
+.text-muted-foreground {
+    color: var(--muted-foreground);
+}
+
+/* Enhanced styling for login button */
+button {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    color: var(--primary-foreground);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 700; /* Bolder font weight for emphasis */
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Deeper shadow for prominence */
+    text-transform: uppercase; /* Uppercase text for a strong appearance */
+}
+
+button:hover {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.8) 0%, rgba(16, 185, 129, 0.8) 100%);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:focus {
+    outline: 3px solid var(--ring);
+    outline-offset: 2px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Enhanced styling for forgot password link */
+a.text-accent {
+    font-size: 0.875rem;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.3s, text-decoration-color 0.3s;
+}
+
+a.text-accent:hover {
+    color: rgba(16, 185, 129, 0.8);
+    text-decoration-color: var(--accent);
+}

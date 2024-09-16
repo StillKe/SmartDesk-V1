@@ -1,0 +1,103 @@
+/* Login Form Styling */
+#login {
+  background-color: #ffffff;
+  padding: 40px;
+  margin: 50px auto;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  position: relative; /* For better positioning */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Header Styling for Form */
+#login h2 {
+  margin-bottom: 20px;
+  color: #4a90e2;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+/* Form Group Styling */
+#login .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+  height: 12vh;
+}
+
+/* Label Styling */
+#login .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Input Field Styling */
+#login .form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  
+}
+
+/* Input Hover and Focus Effects */
+#login .form-group input:hover,
+#login .form-group input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.2);
+}
+
+/* Button Styling */
+#login button[type="submit"] {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  width: 100%;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Hover Effect */
+#login button[type="submit"]:hover {
+  background-color: #357ABD;
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Forgot Password Link Styling */
+#login .forgot-password {
+  display: block;
+  margin-top: 15px;
+  color: #4a90e2;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: color 0.3s ease;
+}
+
+#login .forgot-password:hover {
+  color: #357ABD;
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #login {
+    padding: 30px;
+    margin: 30px auto;
+  }
+
+  #login h2 {
+    font-size: 1.6em;
+  }
+}

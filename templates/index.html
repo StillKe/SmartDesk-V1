@@ -1,0 +1,194 @@
+
+{% extends "base.html" %}
+{% block title %} Index Page {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/client.css')}}" />
+<link rel="stylesheet" href="{{url_for("static", filename="css/book.css")}}" />
+<link rel="stylesheet" href="{{url_for("static", filename="css/planNpricing.css")}}" />
+<link rel="stylesheet" href="{{url_for("static", filename="css/ProgramList.css")}}" />
+
+<main>
+<!-- Home Section -->
+      <h1>Become Empowered by SmartDesk by your side</h1>
+      <p>SmartDesk School Management System with everything you need, all brought together.</p>
+      <p>
+         Designed to streamline operations, enhance academic delivery, and foster a vibrant educational community.
+      </p>
+      <p>
+        Adapts to your workflows and helps educational institutions meet the demands of contemporary education, ensuring administrators, educators, and students thrive in a supportive and efficient environment.
+      </p>
+
+
+<!-- Program List Section -->
+      <div class="container">
+            <section id="program-list">
+                <h2>Our Solutions Explained</h2>
+                <div class="program-container">
+                    <div class="program">
+                        <h4> Administration Management</h4>
+						     <p class="description">Simplify the complexities of day-to-day school activities and admin tasks</p>
+                        <p class="description">Our School Management System offers comprehensive tools for administrators to manage school operations effectively, from student enrollment to scheduling, attendance tracking, and reporting.</p>
+                   
+                    </div>
+                    <div class="program">
+                        <h4>Student Information System (SIS)</h4>
+						<p class="description">Simplify the process of learner performance in an accurate and compliant way</p>
+                        <p class="description">The Student Information System (SIS) provides students with easy access to grades, schedules, and course materials. It also allows them to communicate with teachers and peers in a collaborative learning environment.</p>
+                        
+                    </div>
+                    <div class="program">
+                        <h4>Teacher Tools & Resources</h4>
+						<p class="description">Your Passion for Education, Our Integrated Tech Solution</p>
+                        <p class="description">Our Teacher Tools include lesson planning, gradebook management, and attendance tracking systems that streamline daily tasks and foster a more productive classroom experience.</p>
+                        
+                    </div>
+					<div class="program">
+                        <h4>Parent Portal Access</h4>
+                        <p class="description">The Parent Portal gives parents access to their child's academic progress, attendance records, and upcoming school events, helping them stay involved in their education.With the Parent Portal, you can stay actively involved in your child's education and support their success.</p>
+                        
+                    </div>
+					<div class="program">
+                        <h4>Library Management System</h4>
+                        <p class="description">Manage your school's library effortlessly with our Library Management System, which includes cataloging, circulation, and inventory tracking, ensuring efficient and easy access to resources.</p>
+                        
+                    </div>
+					<div class="program">
+                        <h4>Online Learning Platform</h4>
+                        <p class="description">Our Online Learning Platform supports distance learning with interactive content, live classes, quizzes, and assessments, making it ideal for blended learning environments.</p>
+                      
+                    </div>
+					<div class="program">
+                        <h4>Payment Collection Solution</h4>
+                        <p class="description">Did you know you can arrange your payments perfectly with
+                         Payments in SmartDesk</p>
+						 <p class="description">Tired of dealing with the hassle of cash payments at your school? <p>
+						 <p class="description">Look no further! </p>
+						  <p class="description">Payments in SmartDesk is here to transform the way you collect payments</p>
+						  <p class="description">Bid farewell to the endless paperwork, mismanaged receipts, and accounting chaos.</p>
+                        
+						
+                    </div>
+					<div class="program">
+                        <h4>Transport Management</h4>
+                        <p class="description">Our Transport Management System helps schools manage transportation services, including route planning, vehicle tracking, and safety protocols, ensuring a secure and efficient commute for students.</p>
+                     
+						
+                    </div>
+                </div>
+            </section>
+        </div>
+<!-- Book Online Section -->
+<div class="container">
+            <section id="booking-form">
+                <h2>Schedule Your Appointment</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Preferred Time</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Information</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit">Book Now</button>
+                </form>
+            </section>
+            <aside id="services">
+                <h2>Our Services</h2>
+                <div class="service">
+                    <h3>Consultation</h3>
+                    <p>Get expert advice and guidance tailored to your needs.</p>
+                </div>
+                <div class="service">
+                    <h3>Training</h3>
+                    <p>Attend training sessions to improve your skills and knowledge.</p>
+                </div>
+                <div class="service">
+                    <h3>Support</h3>
+                    <p>Receive ongoing support and assistance whenever you need it.</p>
+                </div>
+            </aside>
+        </div>
+<!-- Clients Section -->
+<section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <img src="{{ url_for('static', filename='img/jane_doe.jpg') }}" alt="Jane Doe Photo" class="testimonial-photo">
+                <blockquote>
+                    "This service has transformed our approach to education. Highly recommend!"
+                </blockquote>
+                <footer>Jane Doe, Educator</footer>
+            </div>
+            <div class="testimonial">
+                <img src="{{ url_for('static', filename='img/john_smith.jpg') }}" alt="John Smith Photo" class="testimonial-photo">
+                <blockquote>
+                    "A game-changer in student management. Excellent support and features."
+                </blockquote>
+                <footer>John Smith, School Administrator</footer>
+            </div>
+            <div class="testimonial">
+                <img src="{{ url_for('static', filename='img/emily_johnson.jpg') }}" alt="Emily Johnson Photo" class="testimonial-photo">
+                <blockquote>
+                    "The intuitive interface and powerful tools have made our job so much easier."
+                </blockquote>
+                <footer>Emily Johnson, Teacher</footer>
+            </div>
+            <div class="testimonial">
+                <img src="{{ url_for('static', filename='img/michael_brown.jpg') }}" alt="Michael Brown Photo" class="testimonial-photo">
+                <blockquote>
+                    "Fantastic experience! The system is user-friendly and very effective."
+                </blockquote>
+                <footer>Michael Brown, Principal</footer>
+            </div>
+            <div class="testimonial">
+                <img src="{{ url_for('static', filename='img/linda_davis.jpg') }}" alt="Linda Davis Photo" class="testimonial-photo">
+                <blockquote>
+                    "Exceptional service with great customer support. Highly recommended."
+                </blockquote>
+                <footer>Linda Davis, School Manager</footer>
+            </div>
+            <div class="testimonial">
+                <img src="{{ url_for('static', filename='img/david_wilson.jpg') }}" alt="David Wilson Photo" class="testimonial-photo">
+                <blockquote>
+                    "An invaluable tool for our educational institution. It's been a huge help."
+                </blockquote>
+                <footer>David Wilson, Education Consultant</footer>
+            </div>
+        </div>
+    </section>
+
+<!-- Members -->
+    <div class="relative w-full overflow-hidden">
+  <h2 class="text-center text-2xl font-semibold text-primary">Some proud SmartDesk-Family schools</h2>
+  <a href="{{url_for('members') }}" class="flex space-x-4 overflow-x-auto snap-x snap-mandatory py-4">
+    <img class="w-32 h-32 object-contain snap-center" src="{{ url_for('static', filename='img/logo1.jpg') }}" alt="Alberton School Logo" />
+    <img class="w-32 h-32 object-contain snap-center" src="{{ url_for('static', filename='img/logo2.jpg') }}" alt="School 2 Logo" />
+    <img class="w-32 h-32 object-contain snap-center" src="{{ url_for('static', filename='img/logo3.jpg') }}"alt="School 3 Logo" />
+    <img class="w-32 h-32 object-contain snap-center" src="{{ url_for('static', filename='img/logo4.jpg') }}" alt="School 4 Logo" />
+
+  </a>
+</div>
+
+
+
+</main>
+    
+{% endblock %}

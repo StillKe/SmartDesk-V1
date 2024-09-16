@@ -1,0 +1,77 @@
+{% block title %}Student Portal - SmartDesk {% endblock %}
+<link rel="stylesheet" href="{{url_for("static", filename="css/TeachersDashboard.css")}}" />
+ <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>Teacher Dashboard</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#" class="active">Dashboard Overview</a></li>
+                <li><a href="#">Class Management</a></li>
+                <li><a href="#">Assignments</a></li>
+                <li><a href="#">Gradebook</a></li>
+                <li><a href="#">Attendance</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="dashboard-header">
+            <h1>Dashboard Overview</h1>
+        </header>
+        
+        <!-- Dashboard Cards Section -->
+        <section class="dashboard-section">
+            <div class="dashboard-card">
+                <h3>Total Classes</h3>
+                <p>5 Active Classes</p>
+            </div>
+            <div class="dashboard-card">
+                <h3>Upcoming Assignments</h3>
+                <p>3 Assignments Due This Week</p>
+            </div>
+            <div class="dashboard-card">
+                <h3>Pending Grades</h3>
+                <p>12 Assignments to Grade</p>
+            </div>
+            <div class="dashboard-card">
+                <h3>Messages</h3>
+                <p>2 New Messages</p>
+            </div>
+        </section>
+
+        <!-- Class Management Table -->
+        <section class="class-management">
+            <h2>Manage Classes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Subject</th>
+                        <th>Students</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Class 10A</td>
+                        <td>Mathematics</td>
+                        <td>30</td>
+                        <td><button>Edit</button> <button>View</button></td>
+                    </tr>
+                    <tr>
+                        <td>Class 9B</td>
+                        <td>Physics</td>
+                        <td>28</td>
+                        <td><button>Edit</button> <button>View</button></td>
+                    </tr>
+                    <!-- More rows as needed -->
+                </tbody>
+            </table>
+        </section>
+    </main>

@@ -1,0 +1,40 @@
+{% block title %}Student Portal - SmartDesk {% endblock %}
+<link rel="stylesheet" href="{{url_for("static", filename="css/StudentPortal.css")}}" />
+<!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>Student Portal</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Grades</a></li>
+                <li><a href="#">Assignments</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="portal-header">
+            <h1>Dashboard</h1>
+        </header>
+        <section class="portal-dashboard">
+            <div class="dashboard-card">
+                <h3>Upcoming Classes</h3>
+                <p>No classes scheduled for today.</p>
+            </div>
+            <div class="dashboard-card">
+                <h3>Pending Assignments</h3>
+                <p>2 Assignments Due This Week</p>
+            </div>
+            <div class="dashboard-card">
+                <h3>Latest Grades</h3>
+                <p>Your latest grades have been updated.</p>
+            </div>
+        </section>

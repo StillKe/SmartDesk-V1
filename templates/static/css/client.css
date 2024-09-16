@@ -1,0 +1,41 @@
+/* Styling for the testimonial container */
+.testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Styling for each testimonial */
+.testimonial {
+    background-color: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+
+/* Styling for testimonial photos */
+.testimonial-photo {
+    width: 80px; /* Adjust size as needed */
+    height: 80px; /* Adjust size as needed */
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border: 3px solid #ddd;
+}
+
+/* Styling for blockquote */
+blockquote {
+    font-style: italic;
+    margin: 10px 0;
+}
+
+/* Styling for footer */
+footer {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #555;
+}

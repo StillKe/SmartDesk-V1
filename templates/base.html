@@ -1,30 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask App</title>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="{{url_for("static", filename="css/styles.css")}}" />
+   <title>{%block title %}SmartDesk{% endblock %}</title>
 </head>
 <body>
-    <nav>
-        <a href="{{ url_for('home') }}">Home</a>
-        {% if current_user.is_authenticated %}
-            <a href="{{ url_for('profile') }}">Profile</a>
-            <a href="{{ url_for('logout') }}">Logout</a>
-        {% else %}
-            <a href="{{ url_for('login') }}">Login</a>
-            <a href="{{ url_for('register') }}">Register</a>
-        {% endif %}
-    </nav>
-    <div>
-        {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-                {% for category, message in messages %}
-                    <div class="flash {{ category }}">{{ message }}</div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
+   
+   <header>
+      <div>
+        <nav>
+          <a href="{{url_for('index') }}">Home</a>
+		  <a href="#program-list">Program List</a>
+		   <a href="#booking-form">Book Online</a>
+          <a href="#testimonials">Clients</a>
+          <a href="{{url_for('blog') }}">Blog</a>
+         
+         
+         
+       
+        </nav>
+      </div>
+      <div>
+	
+      <a href="{{url_for('members') }}"><button>Members Area</button></a>
+      <a href="{{url_for('signup') }}"><button>Register</button></a>
+      </div>
+    </header>
+	
+   {% block content %}
+   {% endblock %}
+   
+ <footer>
+    <div class="footer-section">
+        <h3>About Us</h3>
+        <p>We are committed to providing the best educational resources and tools for schools and students. Our mission is to enhance learning experiences through innovative technology.</p>
     </div>
-    {% block content %}{% endblock %}
+    <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: support@example.com</p>
+        <p>Phone: +123 456 7890</p>
+        <p>Address: 123 Education Lane, Learning City, LC 45678</p>
+    </div>
+    <div class="footer-section">
+        <h3>Follow Us</h3>
+        <a href="https://www.facebook.com/SarisThetrader" target="_blank" class="social-link">Facebook</a>
+        <a href="https://x.com/Mgeni_Mwenyeji" target="_blank" class="social-link">Twitter</a>
+        <a href="https://www.instagram.com/dark_tap_ent/" target="_blank" class="social-link">Instagram</a>
+        <a href="https://www.linkedin.com/in/philip-kahihu-077723a6/" target="_blank" class="social-link">LinkedIn</a>
+    </div>
+    <div class="footer-section">
+        <h3>Services</h3>
+        <ul>
+            <li><a href="{{url_for('login') }}">School Management</a></li>
+            <li><a href="{{url_for('login') }}">Student Portal</a></li>
+            <li><a href="{{url_for('login') }}">Teacher Tools</a></li>
+            <li><a href="{{url_for('login') }}">Parent Access</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="/about-us" class="footer-link">About Us</a></li>
+            <li><a href="/contact" class="footer-link">Contact</a></li>
+            <li><a href="/faq" class="footer-link">FAQ</a></li>
+            <li><a href="/privacy-policy" class="footer-link">Privacy Policy</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+        <h3>Newsletter Signup</h3>
+        <form action="/subscribe" method="post" class="newsletter-form">
+            <input type="email" name="email" placeholder="Your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</footer>
 </body>
 </html>
