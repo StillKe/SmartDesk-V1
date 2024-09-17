@@ -1,9 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-</head>
+
+{% extends "base.html" %}
+{% block title %} Index Page {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/client.css')}}" />
+<link rel="stylesheet" href="{{url_for("static", filename="css/book.css")}}" />
+<link rel="stylesheet" href="{{url_for("static", filename="css/planNpricing.css")}}" />
+<link rel="stylesheet" href="{{url_for("static", filename="css/ProgramList.css")}}" />
+
 <body>
     <h1>Login</h1>
     <form method="POST" action="">
@@ -26,6 +30,7 @@
             {{ form.submit() }}
         </p>
     </form>
-    <a href="{{ url_for('home') }}">Home</a>
+
 </body>
-</html>
+{% endblock %}
+
